@@ -53,20 +53,20 @@ public class PA : MonoBehaviour
         coll2D.enabled = true;
 
         StartCoroutine(disableHitBox());
-        if (animSta.IsName(IdleState) && HitCount == 0 && animSta.normalizedTime > 0.37f)
+        if (animSta.IsName(IdleState) && HitCount == 0 && animSta.normalizedTime > 0.27f)
         {
             anim.SetInteger("Attack", 1);
             HitCount = 1;
             Debug.Log("cc");
         }
         else
-            if (animSta.IsName(Attack1State) && HitCount == 1 && animSta.normalizedTime > 0.65f)
+            if (animSta.IsName(Attack1State) && HitCount == 1 && animSta.normalizedTime > 0.45f)
         {
             anim.SetInteger("Attack", 2);
             HitCount = 2;
         }
         else
-            if (animSta.IsName(Attack2State) && HitCount == 2 && animSta.normalizedTime > 0.70f)
+            if (animSta.IsName(Attack2State) && HitCount == 2 && animSta.normalizedTime > 0.50f)
         {
             anim.SetInteger("Attack", 3);
             HitCount = 3;
