@@ -13,8 +13,20 @@ public class LevelSclection : MonoBehaviour
     private void Update()
     {
         UpdateLevelImage();
+        UpdateLevelStatus();
         
     }
+    private void UpdateLevelStatus()
+    {
+        //if the current lv is 5, the pre should be 4;
+        int previousLevelNum=int.Parse(gameObject.name)-1;
+        if(PlayerPrefs.GetInt("Lv"+previousLevelNum)>0)//if the first level star is bigger than 0,second lecel can play;
+        {
+            unlocked=true;
+        }
+
+    }
+
 
     private void UpdateLevelImage()
     {
